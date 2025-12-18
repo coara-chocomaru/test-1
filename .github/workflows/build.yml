@@ -36,7 +36,7 @@ jobs:
       
       - name: Build Kernel
         run: |
-          sudo git clone https://github.com/coara-chocomaru/android_kernel_sts_a04br3-test.git -b orig/
+          sudo git clone https://github.com/coara-chocomaru/android_kernel_sts_a04br3-test.git -b main orig/
           sudo rm -rf ./drivers/power/mediatek
           cp -rf ./orig/drivers/power/mediatek  ./drivers/power/
           sudo rm -rf ./orig
