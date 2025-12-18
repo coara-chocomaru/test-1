@@ -23,7 +23,7 @@
 #include <linux/syscalls.h>
 #include "mt-plat/mtk_thermal_monitor.h"
 #include <charging.h>
-#include <inc/tmp_battery.h>
+#include <../../../../../drivers/misc/mediatek/thermal/mt8167/inc/tmp_battery.h>
 #include <linux/uidgid.h>
 #include <linux/notifier.h>
 #include <linux/fb.h>
