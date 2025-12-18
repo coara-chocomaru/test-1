@@ -38,12 +38,14 @@ jobs:
         run: |
           cd ./drivers/misc/mediatek/ext_disp/include
           ln -s ../mt8167 include
-          cd "$GITHUB_WORKSPACE"
-          
+          cd ./drivers/misc/mediatek/cmdq/v2 && wget https://github.com/ibilux/android_device_tree_hermes/raw/crdroid-9.0/kernel-headers/cmdq_engine.h && cd -
+          cp ./drivers/misc/mediatek/ext_disp/mt8167/extd_platform.h ./drivers/misc/mediatek/ext_disp/
+          cp ./drivers/misc/mediatek/thermal/mt8167/inc/*.h ./drivers/misc/mediatek/thermal/mt8167/
           cp -n ./drivers/misc/mediatek/uart/mt8167/* ./drivers/misc/mediatek/uart/include/
           cp -n ./drivers/misc/mediatek/usb11/*.h ./drivers/misc/mediatek/usb11/mt8167/
           cp -n ./drivers/misc/mediatek/video/mt8167/dispsys/*.h ./drivers/misc/mediatek/video/mt8167/videox/
           cp -n ./drivers/misc/mediatek/video/mt8167/videox/*.h ./drivers/misc/mediatek/video/common/
+          cd "$GITHUB_WORKSPACE"
           
           export PYTHON=python2.7
           alias python=python2.7
