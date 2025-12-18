@@ -15,7 +15,7 @@
 #define __MTK_UART_H__
 
 #include <mt-plat/sync_write.h>
-#include "platform_uart.h"
+#include "../../../../../drivers/misc/mediatek/uart/mt8167/platform_uart.h"
 
 /*---------------------------------------------------------------------------*/
 #if defined(ENABLE_VFIFO_DEBUG)
