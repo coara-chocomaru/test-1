@@ -22,8 +22,8 @@
 #include <linux/wakelock.h>
 #include <linux/slab.h>
 #include <linux/spinlock.h>
-#include <mtk_leds_hal.h>
-#include <mtk_leds_drv.h>
+#include <../mt8167/mtk_leds_hal.h>
+#include <../mt8167/mtk_leds_drv.h>
 #ifdef CONFIG_MTK_PWM
 #include <mt-plat/mtk_pwm.h>
 #endif
