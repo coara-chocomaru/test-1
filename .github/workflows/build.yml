@@ -39,12 +39,8 @@ jobs:
           sudo git clone https://github.com/coara-chocomaru/android_kernel_sts_a04br3-test.git -b main orig/
           sudo rm -rf ./drivers/power
           sudo rm -rf ./drivers/misc/mediatek/lcm
-          sudo rm -rf ./drivers/pinctrl/mediatek
-          sudo rm -rf ./drivers/misc/mediatek/power
           cp -rf ./orig/drivers/power  ./drivers/
           cp -rf ./orig/drivers/misc/mediatek/lcm ./drivers/misc/mediatek/
-          cp -rf ./orig/drivers/pinctrl/mediatek ./drivers/pinctrl/
-          cp -rf ./orig/drivers/misc/mediatek/power ./drivers/misc/mediatek/
           sudo rm -rf ./orig
           cd ./drivers/misc/mediatek/ext_disp/include
           ln -s ../mt8167 include
