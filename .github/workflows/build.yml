@@ -28,7 +28,6 @@ jobs:
       
       - name: Build Kernel
         run: |
-          cd ./drivers/misc/mediatek/cmdq/v2 && wget https://github.com/ibilux/android_device_tree_hermes/raw/crdroid-9.0/kernel-headers/cmdq_engine.h && cd -
           cd ./drivers/misc/mediatek/ext_disp/include
           ln -s ../mt8167 include
           
