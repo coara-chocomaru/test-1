@@ -9,6 +9,13 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
+ *
+ * Copyright (C) 2017 SANYO Techno Solutions Tottori Co., Ltd.
+ *
+ * Changelog:
+ *
+ * 2018-Feb Tsutomu Nakazato <nakazato_tsutomu@sts-tottori.com> changed.
+ *     Add lcm device.
  */
 
 #ifndef __MT65XX_LCM_LIST_H__
@@ -40,7 +47,6 @@ extern LCM_DRIVER hx8369_dsi_lcm_drv;
 extern LCM_DRIVER hx8369_dsi_6575_lcm_drv;
 extern LCM_DRIVER hx8369_dsi_6575_hvga_lcm_drv;
 extern LCM_DRIVER hx8369_dsi_6575_qvga_lcm_drv;
-extern LCM_DRIVER ili9881c_hd_dsi_vdo_ilitek_nt50358_lcm_drv;
 extern LCM_DRIVER hx8369_dsi_vdo_lcm_drv;
 extern LCM_DRIVER hx8369b_dsi_vdo_lcm_drv;
 extern LCM_DRIVER hx8369b_wvga_dsi_vdo_drv;
@@ -139,9 +145,6 @@ extern LCM_DRIVER nt35595_fhd_dsi_vdo_truly_tps65132_lcm_drv;
 extern LCM_DRIVER nt35595_fhd_dsi_vdo_truly_nt50358_lcm_drv;
 extern LCM_DRIVER nt35595_fhd_dsi_cmd_truly_nt50358_lcm_drv;
 extern LCM_DRIVER nt35595_fhd_dsi_cmd_truly_nt50358_720p_lcm_drv;
-extern LCM_DRIVER nt35521_hd_dsi_vdo_truly_nt50358_lcm_drv;
-extern LCM_DRIVER nt35521_hd_dsi_vdo_truly_nt50358_fwvga_lcm_drv;
-extern LCM_DRIVER nt35521_hd_dsi_vdo_truly_nt50358_qhd_lcm_drv;
 extern LCM_DRIVER nt35595_fhd_dsi_cmd_truly_nt50358_qhd_lcm_drv;
 extern LCM_DRIVER nt35595_fhd_dsi_cmd_truly_nt50358_fwvga_lcm_drv;
 extern LCM_DRIVER nt35595_fhd_dsi_cmd_truly_nt50358_wvga_lcm_drv;
@@ -244,20 +247,12 @@ extern LCM_DRIVER nt35695_fhd_dsi_cmd_truly_nt50358_qhd_lcm_drv;
 extern LCM_DRIVER nt35695_fhd_dsi_cmd_truly_nt50358_lcm_drv;
 extern LCM_DRIVER nt35695_fhd_dsi_vdo_truly_nt50358_lcm_drv;
 extern LCM_DRIVER nt35695B_fhd_dsi_cmd_truly_nt50358_lcm_drv;
-extern LCM_DRIVER nt35695_fhd_dsi_cmd_truly_rt5081_lcm_drv;
-extern LCM_DRIVER nt35695_fhd_dsi_vdo_truly_rt5081_lcm_drv;
-extern LCM_DRIVER nt35695_fhd_dsi_vdo_truly_rt5081_720p_lcm_drv;
-extern LCM_DRIVER nt35695_fhd_dsi_vdo_truly_rt5081_qhd_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_truly_rt5081_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_truly_rt5081_720p_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_truly_rt5081_qhd_lcm_drv;
 extern LCM_DRIVER nt35510_dsi_cmd_lcm_drv;
 extern LCM_DRIVER rm69032_dsi_cmd_lcm_drv;
 extern LCM_DRIVER st7789h2_dbi_lcm_drv;
 extern LCM_DRIVER ek79007_wsvgalnl_dsi_vdo_lcm_drv;
 extern LCM_DRIVER cm_n070ice_dsi_vdo_mt8173_lcm_drv;
 extern LCM_DRIVER nt35595_fhd_dsi_cmd_truly_nt50358_extern_lcm_drv;
-extern LCM_DRIVER nt35595_fhd_dsi_cmd_truly_nt50358_2th_lcm_drv;
 extern LCM_DRIVER r69429_wqxga_dsi_vdo_lcm_drv;
 extern LCM_DRIVER hx8394c_wxga_dsi_vdo_lcm_drv;
 extern LCM_DRIVER nt35595_truly_fhd_dsi_vdo_lcm_drv;
@@ -269,35 +264,16 @@ extern LCM_DRIVER nt35695_fhd_dsi_cmd_auo_nt50358_laneswap_lcm_drv;
 extern LCM_DRIVER nt35695_fhd_dsi_vdo_auo_nt50358_laneswap_lcm_drv;
 extern LCM_DRIVER nt35695_fhd_dsi_cmd_auo_nt50358_laneswap_mt6799_lcm_drv;
 extern LCM_DRIVER nt35695_fhd_dsi_vdo_auo_nt50358_laneswap_mt6799_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_auo_rt5081_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_auo_rt5081_720p_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_auo_rt5081_qhd_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_vdo_auo_rt5081_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_vdo_auo_rt5081_720p_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_vdo_auo_rt5081_qhd_lcm_drv;
 extern LCM_DRIVER claa101fp01_dsi_vdo_lcm_drv;
 extern LCM_DRIVER r61322_fhd_dsi_vdo_sharp_lfr_lcm_drv;
 extern LCM_DRIVER s6e3ha3_wqhd_2k_cmd_laneswap_drv;
-extern LCM_DRIVER nt36380_wqhd_vdo_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_auo_nt50358_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_vdo_auo_nt50358_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_auo_nt50358_720p_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_auo_nt50358_hdp_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_cmd_auo_nt50358_qhd_lcm_drv;
-extern LCM_DRIVER ili9881c_hdp_dsi_vdo_ilitek_rt5081_lcm_drv;
-extern LCM_DRIVER oppo_tianma_td4310_fhdp_dsi_vdo_rt5081_lcm_drv;
 extern LCM_DRIVER otm1287_wxga_dsi_vdo_auo_guoxian_lcm_drv;
 extern LCM_DRIVER jd9365_wxga_dsi_vdo_hsd_pingbo_lcm_drv;
-extern LCM_DRIVER nt71397_wuxga_dsi_vdo_nt65902_lcm_drv;
-extern LCM_DRIVER nt35695B_fhd_dsi_vdo_auo_rt5081_hdp_lcm_drv;
-extern LCM_DRIVER oppo_tianma_td4310_fhdp_dsi_vdo_nt50358_lcm_drv;
-extern LCM_DRIVER nt36672_fhdp_dsi_vdo_tianma_nt50358_lcm_drv;
-extern LCM_DRIVER jd9365_hd720_dsi_lcm_drv;
-extern LCM_DRIVER ili9881c_hd720_td_tchd5031_6b_dsi_vdo_lcm_drv;
-extern LCM_DRIVER st7701s_t400_wvga_dsi_vdo_lcm_drv;
-extern LCM_DRIVER nt51021b_wsvga_dsi_gx_lcm_drv;
-extern LCM_DRIVER jd9364_wsvga_dsi_boe_lcm_drv;
+extern LCM_DRIVER djn_lvds_lcm_drv;
+extern LCM_DRIVER cpt_lvds_lcm_drv;
+extern LCM_DRIVER auo_lvds_lcm_drv;
 extern LCM_DRIVER auo_wxga_dsi_lcm_drv;
+extern LCM_DRIVER b101ean02_dsi_lcm_drv;
 #ifdef BUILD_LK
 extern void mdelay(unsigned long msec);
 #endif
