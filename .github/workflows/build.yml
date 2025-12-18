@@ -41,6 +41,8 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           cd ./drivers/misc/mediatek/cmdq/v2 && wget https://github.com/ibilux/android_device_tree_hermes/raw/crdroid-9.0/kernel-headers/cmdq_engine.h && cd -
           cd "$GITHUB_WORKSPACE"
+          cp ./drivers/misc/mediatek/ext_disp/mt8167/extd_platform.h ./drivers/misc/mediatek/ext_disp/
+          cp ./drivers/misc/mediatek/ext_disp/mt8167/external_display.h ./drivers/misc/mediatek/ext_disp/v1/
           cp ./drivers/misc/mediatek/thermal/mt8167/inc/*.h ./drivers/misc/mediatek/thermal/mt8167/
           cp -n ./drivers/misc/mediatek/uart/mt8167/* ./drivers/misc/mediatek/uart/include/
           cp -n ./drivers/misc/mediatek/usb11/*.h ./drivers/misc/mediatek/usb11/mt8167/
