@@ -40,6 +40,11 @@ jobs:
           ln -s ../mt8167 include
           cd "$GITHUB_WORKSPACE"
           
+          cp -n ./drivers/misc/mediatek/uart/mt8167/* ./drivers/misc/mediatek/uart/include/
+          cp -n ./drivers/misc/mediatek/usb11/*.h ./drivers/misc/mediatek/usb11/mt8167/
+          cp -n ./drivers/misc/mediatek/video/mt8167/dispsys/*.h ./drivers/misc/mediatek/video/mt8167/videox/
+          cp -n ./drivers/misc/mediatek/video/mt8167/videox/*.h ./drivers/misc/mediatek/video/common/
+          
           export PYTHON=python2.7
           alias python=python2.7
           export ARCH=arm64
