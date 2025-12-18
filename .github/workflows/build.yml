@@ -25,6 +25,12 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get install -y bc libssl-dev
+
+      - name: Install Python2
+        run: |
+           sudo apt-get update
+           sudo apt-get install -y python2.7
+           python2 --version
       
       - name: Build Kernel
         run: |
