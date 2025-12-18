@@ -28,14 +28,18 @@ jobs:
 
       - name: Install Python2
         run: |
-           sudo apt-get update
            sudo apt-get install -y python2.7
+           sudo apt-get install -y git
            sudo ln -sf /usr/bin/python2.7 /usr/bin/python
            sudo ln -sf /usr/bin/python2.7 /usr/bin/python2
            python2 --version
       
       - name: Build Kernel
         run: |
+          sudo git clone https://github.com/coara-chocomaru/android_kernel_sts_a04br3-test.git -b orig/
+          sudo rm -rf ./drivers/power/mediatek
+          cp -rf ./orig/drivers/power/mediatek  ./drivers/power/
+          sudo rm -rf ./orig
           cd ./drivers/misc/mediatek/ext_disp/include
           ln -s ../mt8167 include
           cd "$GITHUB_WORKSPACE"
