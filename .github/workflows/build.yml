@@ -38,7 +38,7 @@ jobs:
         run: |
           sudo git clone https://github.com/coara-chocomaru/android_kernel_sts_a04br3-test.git -b main orig/
           sudo rm -rf ./drivers/power
-          sudo rm −rf ./drivers/misc/mediatek/lcm
+          sudo rm -rf ./drivers/misc/mediatek/lcm
           cp -rf ./orig/drivers/power  ./drivers/
           cp -rf ./orig/drivers/misc/mediatek/lcm ./drivers/misc/mediatek/
           sudo rm -rf ./orig
