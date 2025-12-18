@@ -31,6 +31,8 @@ jobs:
           cd ./drivers/misc/mediatek/ext_disp/include
           ln -s ../mt8167 include
           
+          export ARCH=arm64
+          export CROSS_COMPILE=aarch64-linux-gnu-
           export CFLAGS="-w"
           export CXXFLAGS="-w"
           make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- a04br3_defconfig
