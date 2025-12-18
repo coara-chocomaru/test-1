@@ -37,8 +37,8 @@ jobs:
       - name: Build Kernel
         run: |
           sudo git clone https://github.com/coara-chocomaru/android_kernel_sts_a04br3-test.git -b main orig/
-          sudo rm -rf ./drivers/power/mediatek
-          cp -rf ./orig/drivers/power/mediatek  ./drivers/power/
+          sudo rm -rf ./drivers/power
+          cp -rf ./orig/drivers/power  ./drivers/
           sudo rm -rf ./orig
           cd ./drivers/misc/mediatek/ext_disp/include
           ln -s ../mt8167 include
