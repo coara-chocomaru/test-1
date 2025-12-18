@@ -12,7 +12,7 @@
  */
 
 #include <linux/leds.h>
-#include <./mt8167/mtk_leds_hal.h>
+#include <../../../../../drivers/misc/mediatek/leds/mt8167/mtk_leds_hal.h>
 
 /****************************************************************************
  * LED DRV functions
