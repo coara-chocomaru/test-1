@@ -30,6 +30,7 @@ jobs:
         run: |
            sudo apt-get update
            sudo apt-get install -y python2.7
+           ln -s /usr/bin/python2.7 /usr/bin/python2
            python2 --version
       
       - name: Build Kernel
